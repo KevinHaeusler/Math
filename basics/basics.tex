@@ -1,0 +1,124 @@
+\section*{Allgemein}
+\begin{multicols}{3}
+\subsection*{Wachstum und Verfall}
+\textbf{Wachtsumsfaktor:}
+\begin{equation*}
+    q = 100\ \% + p\ \% = 1 + \frac{p}{100}
+\end{equation*} 
+\textbf{Verdoppelungszeit:}
+\begin{equation*}
+    t_V = \frac{\ln(2)}{\ln(q)}
+\end{equation*}
+\textbf{Abnahme:}
+\begin{equation*}
+    B(t) = {\color{red}m} \cdot t + b \quad \text{mit } {\color{red}m < 0}
+\end{equation*}
+
+\subsection*{Summe und Produkte}
+\textbf{Summezeichen:} \\
+Es sei:  n, k $\in$ Z und n $\geq$ k
+\begin{equation*}
+    \sum_{k=1}^{n} a_k = a_1 + a_2 + a_3 + \ldots + a_n 
+\end{equation*}
+\textbf{Produktzeichen:}
+\begin{equation*}
+    \prod_{k=1}^{n} a_k = a_1 \cdot a_2 \cdot a_3 \cdot \ldots \cdot a_n
+\end{equation*}
+k = Laufvariable, Laufindex  \\
+1 = Startwert  n = Endwert\\
+$a_{k}$ ist die Funktion bezueglich der Laufvariable \\
+
+\subsection*{Aussagen, Logik, Mengen}
+\begin{tabularx}{\columnwidth} {
+        | >{\raggedright\arraybackslash}c
+        | >{\raggedright\arraybackslash}X |}
+    \hline
+    \textbf{*}            & \textbf{Bedeutung}                                           \\ \hline
+    $\varnothing$ oder {} & Leere Menge                        \\ \hline
+    $x\in A$              & Element x ist in Menge A                          \\ \hline
+    $x\notin A$           & Element x ist nicht in Menge A                    \\ \hline
+    $A\subset B$          & A ist eine Teilmenge von B                                   \\ \hline
+    $A\cap B$             & Schnittmenge von A und B                                     \\ \hline
+    $A\cup B$             & Vereinigunsgsmenge von A und B                               \\ \hline
+    $A\backslash B$       & Differenzbildung, Menge A ohne B                         \\\hline
+    $\bar{A}_B$           & $:= \{x \,|\, x \in B \enspace \wedge \enspace x \notin A\}$ \\\hline
+\end{tabularx}
+
+
+\def\firstcircle{(0,0) circle (1cm)}
+    \def\secondcircle{(0:1.2cm) circle (1cm)}
+
+    \colorlet{circle edge}{blue!50}
+    \colorlet{circle area}{blue!20}
+
+    \tikzset{filled/.style={fill=circle area, draw=circle edge, thick},
+        outline/.style={draw=circle edge, thick}}
+
+    \setlength{\parskip}{5mm}
+    % Set A and B
+    \begin{tikzpicture}
+        \begin{scope}
+            \clip \firstcircle;
+            \fill[filled] \secondcircle;
+        \end{scope}
+        \draw[outline] \firstcircle node {$A$};
+        \draw[outline] \secondcircle node {$B$};
+        \node[anchor=south] at (current bounding box.north) {$A \cap B$};
+    \end{tikzpicture}
+    \begin{tikzpicture}
+        \draw[filled] \firstcircle node {$A$}
+        \secondcircle node {$B$};
+        \node[anchor=south] at (current bounding box.north) {$A \cup B$};
+    \end{tikzpicture}
+
+    % Set A but not B
+    \begin{tikzpicture}
+        \begin{scope}
+            \clip \firstcircle;
+            \draw[filled, even odd rule] \firstcircle node {$A$}
+            \secondcircle;
+        \end{scope}
+        \draw[outline] \firstcircle
+        \secondcircle node {$B$};
+        \node[anchor=south] at (current bounding box.north) {$A\backslash  B$};
+    \end{tikzpicture}
+    \begin{tikzpicture}
+        \draw[filled, even odd rule] \firstcircle node {$A$}
+        \secondcircle node{$B$};
+        \node[anchor=south] at (current bounding box.north) {$\overline{A \cap B}$};
+    \end{tikzpicture}\\
+    \textbf{Aussagenlogik:}\\
+    Eine Aussage beschreibt einen Sachverhalt (durch Worte oder Symbole), der
+    entweder wahr oder falsch ist.\\
+
+    \scriptsize
+    \begin{tabular}{@{ }c@{ }@{ }c | c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{ }c | c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c}
+        A & B &  & A & $\land$            & B &  &  & A & $\lor$             & B &  & $\lnot$            & B &  & A & $\lor$             & $\lnot$ & B & \\
+        \hline
+        T & T &  & T & \textcolor{red}{T} & T &  &  & T & \textcolor{red}{T} & T &  & \textcolor{red}{F} & T &  & T & \textcolor{red}{T} & F       & T & \\
+        T & F &  & T & \textcolor{red}{F} & F &  &  & T & \textcolor{red}{T} & F &  & \textcolor{red}{T} & F &  & T & \textcolor{red}{T} & T       & F & \\
+        F & T &  & F & \textcolor{red}{F} & T &  &  & F & \textcolor{red}{T} & T &  & \textcolor{red}{F} & T &  & F & \textcolor{red}{F} & F       & T & \\
+        F & F &  & F & \textcolor{red}{F} & F &  &  & F & \textcolor{red}{F} & F &  & \textcolor{red}{T} & F &  & F & \textcolor{red}{T} & T       & F & \\
+    \end{tabular}
+    \normalsize
+
+    \begin{tabularx}{\columnwidth} {
+        | >{\raggedright\arraybackslash}c
+        | >{\raggedright\arraybackslash}X
+        | >{\raggedright\arraybackslash}c|}
+    \hline
+    \textbf{*}            & \textbf{Bedeutung}                        & \textbf{Beispiel}             \\ \hline
+    $|A|$                 & Kardinalität/Mächtigkeit      & A = {1;2}                     \\
+                          & Anzahl Elemente               & |$|A|$ = 2                    \\ \hline
+    $\land$               & Konkuktion/UND A $\land$    & A $\land$ B                   \\ \hline
+    $\lor$                & Disjunktion/ODER A $\lor$ B  = Wahr wenn  & {-1;0;1;}                     \\\hline
+    $\neg$                & Negation A = W $\neg$A = F      & $\neg $A                      \\\hline
+    $\implies$            & Implikation: Daraus folgt                 &                               \\ \hline
+    $\Longleftrightarrow$ & äquivalenz  &                               \\ \hline
+    $\forall$             & für Alle                                  & $\forall$ $x \in \mathbb{N}$  \\ \hline
+    $\exists$             & Es Existiert                              & $\exists $ $x \in \mathbb{N}$ \\ \hline
+    \end{tabularx}
+\subsection*{Misc}
+
+\newpage
+\end{multicols}

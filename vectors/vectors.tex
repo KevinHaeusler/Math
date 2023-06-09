@@ -1,0 +1,83 @@
+\section*{Vektoren}
+\begin{multicols}{3}
+\subsection*{Definition}
+Ein Vektor ist durch Länge, Richtung und Orientierung eindeutig bestimmt.
+\subsubsection*{Ortsvektor}
+Ein Vektor, dessen Anfangspunkt im Ursprung O und dessen Endpunkt im Punkt A liegt, heißt Ortsvektor $\boldsymbol{\overrightarrow{OA}}$
+von A.
+\begin{equation*}
+    A(x|y) \quad \Rightarrow \quad \overrightarrow{OA} = \begin{pmatrix} x \\ y \end{pmatrix}
+\end{equation*}
+
+\subsubsection*{Vektoraddition}
+Vektoren lassen sich nur dann addieren, wenn sie gleicher Dimension und gleicher Art sind.
+\begin{equation*}
+    \vec{a}+\vec{b} = \begin{pmatrix} x_a \\ y_a\end{pmatrix}+\begin{pmatrix} x_b \\ y_b\end{pmatrix} = \begin{pmatrix} x_a+x_b \\ y_a+y_b\end{pmatrix}
+\end{equation*}
+\subsubsection*{Kommutativgesetz}
+\begin{equation*}
+    \vec{a}+\vec{b} = \vec{b}+\vec{a}
+\end{equation*}
+\subsubsection*{Assoziativgesetz}
+\begin{equation*}
+    (\vec{a}+\vec{b}) + \vec{c} = \vec{a} + (\vec{b}+\vec{c})
+\end{equation*}
+
+\subsubsection*{Vektorsubtraktion}
+Vektoren werden subtrahiert, indem man ihre Komponenten subtrahiert:
+\begin{equation*}
+    \vec{a}-\vec{b} = \begin{pmatrix} x_a \\ y_a\end{pmatrix}-\begin{pmatrix} x_b \\ y_b\end{pmatrix} = \begin{pmatrix} x_a-x_b \\ y_a-y_b\end{pmatrix}
+\end{equation*}
+
+\subsection*{Skalar­multiplikation}
+Wird ein Vektor $\vec{v}$ mit einem Skalar (einer reellen Zahl) $\lambda$ multipliziert, wird jede Komponente des Vektors mit dieser Zahl multipliziert:
+\begin{equation*}
+    \lambda \cdot \vec{v} = \lambda \cdot \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} \lambda \cdot x \\ \lambda \cdot y \end{pmatrix}
+\end{equation*}
+\subsubsection*{Misc}
+Multipliziert man einen Vektor mit einem Skalar c, wird der Vektor – in Abhängigkeit des Wertes des Skalars – verlängert, verkürzt und/oder er ändert seine Orientierung.\\
+$c > 1$: Der Vektor wird verlängert.\\
+$0 < c < 1$: Der Vektor wird verkürzt.\\
+$c < 0$: Der Vektor ändert seine Orientierung.\\
+
+\subsection*{Betrag eines Vektors}
+Die Länge eines Vektors heisst Betrag des Vektors.
+\begin{equation*}
+    \vec{v}= \begin{pmatrix} x \\ y \end{pmatrix} \Rightarrow \left|\vec{v}\right| = \sqrt{x^2 + y^2}
+\end{equation*}
+
+\subsection*{Einheitsvektor}
+Ein Vektor der Länge 1 heisst Einheitsvektor.
+\begin{equation*}
+    \vec{a}^0 = \frac{1}{|a|} \vec{a}
+\end{equation*}
+\subsubsection*{Abstand zweier Punkte}
+Verbindungsvektor berechnen und dann Länge des Vektors berechnen.
+\subsection*{Skalarprodukt}
+Das Skalarprodukt ist eine mathematische Verknüpfung, die zwei Vektoren eine Zahl (Skalar) zuordnet.
+\begin{equation*}
+    \vec{a} \circ \vec{b} = \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} \circ \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix} = a_1 \cdot b_1 + a_2 \cdot b_2 + a_3 \cdot b_3
+\end{equation*}
+\subsubsection*{Kommutativgesetz}
+\begin{equation*}
+    \vec{a} \circ \vec{b} = \vec{b} \circ \vec{a}
+\end{equation*}
+\subsubsection*{Distributivgesetz}
+\begin{equation*}
+    \vec{a} \circ \left(\vec{b} + \vec{c}\right) = \vec{a} \circ \vec{b} + \vec{a} \circ \vec{c}
+\end{equation*}
+\subsubsection*{Gemischtes
+Assoziativgesetz}
+\begin{equation*}
+    \left(k \cdot \vec{a}\right) \circ \vec{b} = k \cdot \left(\vec{a} \circ \vec{b}\right)
+\end{equation*}
+\subsection*{Winkel zwischen zwei Vektoren}
+
+\begin{equation*}
+    \cos\varphi = \frac{\vec{u}\circ\vec{v}}{\left|\vec{u}\right|\cdot\left|\vec{v}\right|} \qquad \Rightarrow \qquad \varphi = \cos^{-1}\left(\frac{\vec{u}\circ\vec{v}}{\left|\vec{u}\right|\cdot\left|\vec{v}\right|}\right)
+\end{equation*}
+Skalarprodukt berechnen, Beträge der Vektoren berechnen, Zwischenergebnisse in die Formel einsetzen und Formel nach Winkel auflösen.
+
+\newpage
+
+\end{multicols}
