@@ -1,100 +1,133 @@
+
+
 \section*{Gleichungen}
+
 \begin{multicols*}{3}
-    \subsection*{Lineare Gleichung}
-    \textbf{Definiton} \\
-    Eine Gleichung, die sich in die Form $ax + b = 0$ bringen lässt, heisst lineare Gleichung. Wir können lineare Gleichungen daran erkennen, dass die Variable nur in der 1. Potenz auftritt, also kein $x^2$, $x^3$\dots enthalten. \\\\
-    \textbf{Lösen einer Linearen Gleichung}
+\subsection*{Quadratische Gleichungen}
+\textbf{Definiton} \\
+Es gibt 4 Arten/Formen von Quadratischen Gleichungen.
+\begin{enumerate}
+    \item $ax^2 + bx + c = 0 \quad (a, b, c \in \mathbb{R}; a \neq 0)$
+    \item $ax^2 + bx = 0 \quad (a, b \in \mathbb{R}; a \neq 0)$
+    \item $ax^2 + c = 0 \quad (a, c \in \mathbb{R}; a \neq 0)$
+    \item $ax^2 = 0 \quad (a \in \mathbb{R}; a \neq 0)$
+\end{enumerate}
+\subsubsection*{Lösung einer Reinquadratische Gleichung $ax^2 = 0$}
+Reinquadratische Gleichungen ohne Absolutglied besitzen als einzige Lösung die Null.
+\subsubsection*{Lösung einer Reinquadratische Gleichung mit Absolutglied $ax^2 + c = 0$}
+Gleichung nach $x^2$ auflösen, Wurzel ziehen, Lösungsmenge aufschreiben.
+
+\subsubsection*{Lösung einer Gemischtquadratische Gleichungen ohne Absolutglied $ax^2 + bx = 0$}
+Quadratische Gleichung in Normalform bringen, $x$ ausklammern, Faktoren gleich Null setzen, Gleichung nach $x$ auflösen, Lösungsmenge aufschreiben.
+\subsection*{Mitternachtsformel}
+Gemischtquadratische Gleichungen $ax^2 + bx + c = 0$ mit Absolutglied lösen wir mit der Mitternachtsformel:
+\[x_{1/2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]
+\textbf{Fallunterscheidung:} \\
+\begin{align*}
+    x_{1} &= \dfrac{-b - \sqrt{b^2 - 4ac}}{2a} \\
+    x_{2} &= \dfrac{-b + \sqrt{b^2 - 4ac}}{2a}
+\end{align*}
+\subsection*{Regeln}
+Wenn das lineare Glied fehlt, gilt b = 0. \\
+Wenn das absolute Glied fehlt, gilt c = 0. \\
+Wenn das $x^2$ allein steht, gilt a = 0 (wegen $1 \cdot x^2 = x^2$).\\
+Wenn das x allein steht, gilt b - 1(wegen $1 \cdot x = x$).
+\subsection*{Lösen einer Quadratischen Gleichung mit Mitternachtsformel}
+\begin{enumerate}
+    \item Gleichung in allgemeine Form bringen
+    \item a,b,c aus der allgemeinen Form herauslesen
+    \item a,b,c in die Mitternachtsformel einsetzen
+    \item Lösung berechnen
+    \item Lösungsmenge aufschreiben
+\end{enumerate}
+\subsubsection*{Wurzelgleichungen}
+\subsubsection*{Wurzelgesetze}
+Wurzel Addieren = $a{\color{green}\sqrt[n]{x}} + b{\color{green}\sqrt[n]{x}} = (a + b){\color{green}\sqrt[n]{x}}$ \\
+Wurzel Subtrahieren = $a {\color{green}\sqrt[n]{x}} - b{\color{green}\sqrt[n]{x}} = (a - b){\color{green}\sqrt[n]{x}}$ \\
+Wurzel Multiplizieren = $\sqrt[{\color{green}n}]{a} \cdot \sqrt[{\color{green}n}]{b} = \sqrt[{\color{green}n}]{a \cdot b}$ \\
+Wurzel Potenzieren = $(\sqrt[n]{a})^m = \sqrt[n]{a^m}$ \\
+Wurzel Radizieren = $\sqrt[m]{\sqrt[n]{a}} = \sqrt[m \cdot n]{a}$ \\
+Wurzel in Potenz umformen = $\sqrt[n]{a} = a^{\frac{1}{n}}$ oder $\sqrt[n]{a^m} = a^{\frac{m}{n}}$ \\
+Wurzel Quadrieren: $\sqrt[]{a^2} = {(\sqrt[]{a})}^2 = a$ für $a \geq 0$ \\
+Folgerung: $\sqrt[]{a^2} = |a|$
+\subsubsection*{Wurzelgleichung lösen} 
+Wurzel beseitigen (Wurzel isolieren, potenzieren), Gleichung lösen, Probe machen, Lösungsmenge aufschreiben.
+\subsubsection*{Exponential und Logarithmusgleichungen}
+\subsubsection*{Definition}
+Eine Exponentialgleichung ist eine Gleichung, in der die Variable im Exponenten einer Potenz steht. \\
+Eine Logarithmusgleichung ist eine Gleichung, in der die Variable im Numerus des Logarithmus steht.
+\[a^{f(x)} = b^{g(x)} \quad \Rightarrow \quad f(x) \cdot \log a = g(x) \cdot \log b\]
+Logarithmen mit der Basis e (der eulerschen Zahl) heissen natürliche Logarithmen.
+\begin{equation*}
+    e = \lim\limits_{n\rightarrow\infty}{\left(1+\frac{1}{n}\right)^n}.
+\end{equation*}
+$\exp{x} = e^x$ und $\ln{x}$ sind Kehrwertfunktionen
+\begin{equation*}
+    e^{\ln{x}} = x \text{ and } \ln{e^x} = x.
+\end{equation*}
+Exponentenregeln für Exponentengleichung
+\begin{equation*}
+    e^xe^y = e^{x+y} \text{, } \frac{e^x}{e^y}=e^{x-y} \text{, and } \left(e^x\right)^k=e^{xk}.
+\end{equation*}
+Exponentenregeln für Logarithmengleichung
+\begin{equation*}
+    \begin{aligned}
+        \ln{x}+\ln{y} = \ln{xy} \text{, } \ln{x}-\ln{y} = \\
+        \ln{\left(\frac{x}{y}\right)} \text{, and } \ln{\left(a^b\right)} = b\ln{a}.
+    \end{aligned}
+\end{equation*}
+Wir können auch einen Logarithmus jeder Basis schreiben, indem wir natürliche Logarithmen verwenden:
+\begin{equation*}
+    \log_{b}{a} = \frac{\ln{a}}{\ln{b}}.
+\end{equation*}
+\textbf{Lösung des Logarithmus}\\
+Eine Lösung mithilfe der Definition des Logarithmus ist nur dann möglich, wenn es gelingt, die Terme auf beiden Seiten der Gleichung so umzuformen, dass sich auf der einen Seite ein Logarithmus und auf der anderen Seite eine Konstante ergeben.\\
+\textbf{Definitionsmenge Logarithmusgleichung }\\
+Da $\log_{b}x = a$  nur für $x > 0$ definiert ist, kann die Definitionsmenge eingeschränkt sein.
+In der Praxis bedeutet das, dass wir stets die Probe machen sollten, d.h. überprüfen, ob die berechneten Lösungen eingesetzt in die gegebene Gleichung zu einer wahren Aussage führen.\\
+\subsubsection*{Logarithmengesetze}
+Produktregel: $\log_b(P \cdot Q) = \log_b P + \log_b Q$ \\
+Quotientregel: $\log_b\left(\frac{P}{Q}\right) = \log_b P - \log_b Q$ \\
+Potenzregel 1: $\log_b P^n = n \cdot \log_b P$ \\
+Potenzregel 2: $\log_b \sqrt[n]{P} = \frac{\log_b P}{n}$ \\
+Basiswechsel: $\log_a P = \frac{\log_b P}{\log_b a}$    
+\subsection*{Ungleichungen}
+\subsubsection*{Rechenregeln}
+    $ a < b \quad \Longleftrightarrow \quad b > a$\\
+    $a \leq b \quad \Rightarrow \quad a+c \leq b+c$\\
+    $a \leq b \quad\text{und}\quad c \leq d \quad \Rightarrow \quad a+c \leq b+d$\\
+    $a < b \quad\text{und}\quad c \leq d \quad \Rightarrow \quad a+c < b+d$\\
+    $a \leq b \quad\text{und}\quad c \geq 0 \quad \Rightarrow \quad ac \leq bc$\\
+    $a \leq b \quad\text{und}\quad c \leq 0 \quad \Rightarrow \quad ac \geq bc$
+    $a \leq b \quad \Rightarrow \quad \frac{1}{a} \geq \frac{1}{b}$
+    \subsubsection*{Quadratische Ungleichungen}
+    Eine Ungleichung, die sich durch Äquivalenzumformungen in eine der Formen bringen lässt, heisst quadratische Ungleichung.\\
+    $ax^2 + bx + c < 0$\\
+    $ax^2 + bx + c > 0$\\
+    $ax^2 + bx + c \leq 0$\\
+    $ax^2 + bx + c \geq 0$\\
     \begin{enumerate}
-        \item Gleichung nach $x$ auflösen
-        \item Lösungsmenge aufschreiben
+        \item Quadratische Gleichung lösen
+        \item Potenzielle Lösungsintervalle aufstellen
+        \item Überprüfen, welche Lösungsintervalle zur Lösung gehören
     \end{enumerate}
-    \subsection*{Quadratische Gleichungen}
-    \textbf{Definiton} \\
-    Gleichungen, die sich auf die Form $ax^2 + bx + c = 0 \quad (a, b, c \in \mathbb{R}; a \neq 0)$
-    bringen lassen, heissen quadratische Gleichungen. 
-    \\~\\
-    Wir können quadratische Gleichungen daran erkennen, dass die Variable $x$ in der 2. Potenz $x^2$, aber in keiner höheren Potenz vorkommt. 
-    \\~\\
-    Es gibt 4 Arten/Formen von Quadratischen Gleichungen.
+    Eine quadratische Gleichung besitzt entweder keine Lösung, eine Lösung oder zwei Lösungen.
+    \subsubsection*{Bruchungleichungen}
+    Bei Bruchungleichungen gibt es 2 Fälle:
+    \textbf{Rechte Seite der Ungleichung $\neq$ 0}
     \begin{enumerate}
-        \item $ax^2 + bx + c = 0 \quad (a, b, c \in \mathbb{R}; a \neq 0)$
-        \item $ax^2 + bx = 0 \quad (a, b \in \mathbb{R}; a \neq 0)$
-        \item $ax^2 + c = 0 \quad (a, c \in \mathbb{R}; a \neq 0)$
-        \item $ax^2 = 0 \quad (a \in \mathbb{R}; a \neq 0)$
+        \item Bruch durch Fallunterscheidung auflösen
+        \item Lösungsmengen der einzelnen Fälle bestimmen (Intervalle)
+        \item Lösungsmenge der Bruchungleichung bestimmen
     \end{enumerate}
-    \textbf{Lösung einer Reinquadratische Gleichung $ax^2 = 0$}\\~\\
-    Reinquadratische Gleichungen ohne Absolutglied besitzen als einzige Lösung die Null.\\~\\
-    \textbf{Lösung einer Reinquadratische Gleichung mit Absolutglied $ax^2 + c = 0$}
-
+    \begin{equation*} \frac{\text{Z}}{\text{N}} > c = \begin{cases} \frac{\text{Z}}{\text{N}} \cdot \text{N} > c \cdot \text{N} &\text{für } \text{N} > 0 \\[5px] \frac{\text{Z}}{\text{N}} \cdot \text{N} < c \cdot \text{N} &\text{für } \text{N} < 0 \end{cases} \end{equation*}
+    Das Auflösen des Bruchs geschieht durch Multiplikation der Ungleichung mit dem Nenner des Bruchs. Dabei müssen wir jedoch eine Fallunterscheidung vornehmen. Ist der Nenner nämlich negativ, dreht sich das Ungleichheitszeichen um.
+    \begin{equation*} \frac{\text{Z}}{\text{N}} > c = \begin{cases} \text{Z} > c \cdot \text{N} &\text{für } \text{N} > 0 \\[5px] \text{Z} < c \cdot \text{N} &\text{für } \text{N} < 0 \end{cases} \end{equation*}
+    Die Lösungsmenge der Ungleichung ist die Vereinigungsmenge der einzelnen Lösungsmengen.
+    \textbf{Rechte Seite der Ungleichung = 0}
     \begin{enumerate}
-        \item Gleichung nach $x^2$ auflösen
-        \item Wurzel ziehen
-        \item Lösungsmenge aufschreiben
+        \item Definitionsbereich bestimmen
+        \item Nullstellen berechnen
+        \item Intervallweise Betrachtung
     \end{enumerate}
-    \textbf{Lösung einer Gemischtquadratische Gleichungen ohne Absolutglied $ax^2 + bx = 0$}
-
-    \begin{enumerate}
-        \item Quadratische Gleichung in Normalform bringen
-        \item $x$ ausklammern
-        \item  Faktoren gleich Null setzen
-        \item Gleichung nach $x^2$ auflösen
-        \item Lösungsmenge aufschreiben
-    \end{enumerate}
-
-    \subsection*{Mitternachtsformel}
-    Gemischtquadratische Gleichungen $ax^2 + bx + c = 0$ mit Absolutglied lösen wir mit der Mitternachtsformel:
-    \[x_{1/2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]
-    \textbf{Fallunterscheidung:} \\
-    \begin{align*}
-        x_{1} &= \dfrac{-b - \sqrt{b^2 - 4ac}}{2a} \\
-        x_{2} &= \dfrac{-b + \sqrt{b^2 - 4ac}}{2a}
-    \end{align*}
-    \textbf{Übersicht}\\~\\
-    \begin{tabularx}{1.15\columnwidth} {
-            | >{\raggedright\arraybackslash}X
-            | >{\raggedright\arraybackslash}X
-            | >{\raggedright\arraybackslash}X |}
-        \hline
-        \textbf{}                               & \textbf{Allgemeine Form}                       & \textbf{Normalform}                           \\ \hline
-        Reinquadratisch ohne Absolutglied       & $2x^2 = 0$, $a = 2$, $b = 0$ und $c = 0$       & $x^2 = 0$, $a = 1$, $b = 0$ und $c = 0$       \\\hline
-        Reinquadratisch mit Absolutglied        & $2x^2 -8 = 0$, $a = 2$, $b = 0$ und $c = -8$   & $x^2-4 = 0$, $a = 1$, $b = 0$ und $c = -4$    \\ \hline
-        Gemischtquadrat- isch ohne Absolutglied & $2x^2-8x = 0$, $a = 2$, $b = -8$ und $c = 0$   & $x^2 -4x= 0$,  $a = 1$, $b = -4$ und $c = 0$  \\ \hline
-        Gemischtquadrat- isch mit Absolutglied  & $2x^2-8x+6 = 0$, $a = 2$, $b = -8$ und $c = 6$ & $x^2-4x+3 = 0$, $a = 1$, $b = -4$ und $c = 3$ \\ \hline
-    \end{tabularx}\\~\\
-    \textbf{Regeln}\\~\\
-    Wenn das lineare Glied fehlt, gilt b = 0. \\
-    Wenn das absolute Glied fehlt, gilt c = 0. \\
-    Wenn das $x^2$ allein steht, gilt a = 0 (wegen $1 \cdot x^2 = x^2$).\\
-    Wenn das x allein steht, gilt b - 1(wegen $1 \cdot x = x$). \newpage
-    \textbf{Lösen einer Quadratischen Gleichung mit Mitternachtsformel}
-    \begin{enumerate}
-        \item Gleichung in allgemeine Form bringen
-        \item a,b,c aus der allgemeinen Form herauslesen
-        \item a,b,c in die Mitternachtsformel einsetzen
-        \item Lösung berechnen
-        \item Lösungsmenge aufschreiben
-    \end{enumerate}
-    \subsection*{Bruchgleichungen}
-    Wenn die Zähler der Brueche nur aus Zahlen bestehen, kann eine Kehrwertbildung sinnvoll sein.
-    Den Kehrwert eines Bruchs erhält man durch Vertauschen von Zähler und Nenner.\\~\\
-    \[\frac{{\colorbox{yellow}{$1$}}}{{\colorbox{orange}{$x$}}} = \frac{{\colorbox{yellow}{$2$}}}{{\colorbox{orange}{$x+1$}}} \Rightarrow  \frac{{\colorbox{orange}{$x$}}}{{\colorbox{yellow}{$1$}}} = \frac{{\colorbox{orange}{$x+1$}}}{{\colorbox{yellow}{$2$}}}\]
-    \subsubsection*{Lösen einer Bruchgleichung}
-    \begin{enumerate}
-        \item Definitionsmenge bestimmen
-        \item Gleichung nach $x$ auflösen
-        \item Prïfen, ob der x-Wert in der Definitionsmenge ist
-        \item Lösungsmenge aufschreiben
-    \end{enumerate}
-    \subsubsection*{Kehrwert}
-    Wenn die Zähler der Brueche nur aus Zahlen bestehen, kann eine Kehrwertbildung sinnvoll sein.
-    Den Kehrwert eines Bruchs erhält man durch Vertauschen von Zähler und Nenner.\\~\\
-    \[\frac{{\colorbox{yellow}{$1$}}}{{\colorbox{orange}{$x$}}} = \frac{{\colorbox{yellow}{$2$}}}{{\colorbox{orange}{$x+1$}}} \Rightarrow  \frac{{\colorbox{orange}{$x$}}}{{\colorbox{yellow}{$1$}}} = \frac{{\colorbox{orange}{$x+1$}}}{{\colorbox{yellow}{$2$}}}\]
-
-
-    \subsubsection*{Multiplikation übers Kreuz}
-    Wenn auf beiden Seiten der Gleichung jeweils ein Bruch steht, kann eine Multiplikation ueber Kreuz sinnvoll sein.
-    \[\frac{{\colorbox{yellow}{$1$}}}{{\colorbox{orange}{$x$}}} = \frac{{\colorbox{orange}{$2$}}}{{\colorbox{yellow}{$x+1$}}} \Rightarrow {\colorbox{yellow}{$1$}} \cdot {\colorbox{yellow}{$x+1$}} = {\colorbox{orange}{$2$}} \cdot {\colorbox{orange}{$x$}}\]
-
-% AAAAAAAAAAAAAAA
-
 \end{multicols*}
